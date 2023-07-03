@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fruit Sorting App</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h1>Fruit Sorting App</h1>
+
+    <form id="fruitForm">
+      <label for="fruit">Select a fruit:</label>
+      <select id="fruit" name="fruit">
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Orange">Orange</option>
+        <option value="Grapes">Grapes</option>
+      </select>
+
+      <br /><br />
+
+      <label for="color">Select a color:</label>
+      <select id="color" name="color">
+        <option value="Red">Red</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Orange">Orange</option>
+        <option value="Purple">Purple</option>
+      </select>
+
+      <br /><br />
+
+      <input type="submit" value="Add Fruit" />
+    </form>
+
+    <br />
+
+    <div id="result"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#fruitForm").submit(function (event) {
+          event.preventDefault(); // Prevent form submission
+
+          var fruit = $("#fruit").val();
+          var color = $("#color").val();
+
+          // Send POST request to backend API
+          $.ajax({
+            url: "http://localhost:5000/fruits",
+            method: "POST",
+            data: {
+              fruit: fruit,
+              color: color,
+            },
+            success: function (response) {
+              displayFruits(response);
+            },
+          });
+
+          // Clear form fields
+          $("#fruit").val("");
+          $("#color").val("");
+        });
+
+        // Send GET request to backend API on page load
+        $.ajax({
+          url: "http://localhost:5000/fruits",
+          method: "GET",
+          success: function (response) {
+            displayFruits(response);
+          },
+        });
+      });
+
+      function displayFruits(fruits) {
+        var resultDiv = $("#result");
+        resultDiv.empty();
+
+        if (fruits.length === 0) {
+          resultDiv.append("<p>No fruits available.</p>");
+        } else {
+          resultDiv.append("<h3>Sorted Fruits:</h3>");
+          var ul = $("<ul></ul>");
+
+          for (var i = 0; i < fruits.length; i++) {
+            var fruit = fruits[i];
+            var li = $("<li></li>").text(fruit.name + " - " + fruit.color);
+            ul.append(li);
+          }
+
+          resultDiv.append(ul);
+        }
+      }
+    </script>
+  </body>
+</html>
