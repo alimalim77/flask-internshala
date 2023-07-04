@@ -1,0 +1,45 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  select {
+    width: 150px;
+    padding: 5px;
+  }
+  
+  input[type="submit"] {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #result {
+    margin-top: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 5px;
+  }
+  

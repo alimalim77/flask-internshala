@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request, render_template
+from flask_cors import CORS
 
-app = Flask(__name__, template_folder='template')
+app = Flask(__name__, template_folder='template', static_folder='static')
+CORS(app)
 
 class Fruit:
     def __init__(self, id, name, color):
@@ -12,7 +14,7 @@ def sort_fruits_by_color(fruits):
     sorted_fruits = sorted(fruits, key=lambda fruit: fruit.color)
     return sorted_fruits
 
-fruits = [] 
+fruits = []
 
 @app.route('/', methods=['GET'])
 def index():
@@ -33,7 +35,6 @@ def handle_fruits():
                 'name': fruit.name,
                 'color': fruit.color
             })
-        print(fruit_list)
         return jsonify(fruit_list)
     elif request.method == 'GET':
         return jsonify(fruits)

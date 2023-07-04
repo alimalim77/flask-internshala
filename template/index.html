@@ -3,6 +3,7 @@
   <head>
     <title>Fruit Sorting App</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css" />
   </head>
   <body>
     <h1>Fruit Sorting App</h1>
@@ -80,6 +81,8 @@
         } else {
           resultDiv.append("<h3>Sorted Fruits:</h3>");
           var ul = $("<ul></ul>");
+
+          fruits.sort((a, b) => a.name.localeCompare(b.name)); // Sort the fruits by name
 
           for (var i = 0; i < fruits.length; i++) {
             var fruit = fruits[i];
