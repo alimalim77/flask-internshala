@@ -17,4 +17,4 @@ and,
 ## User Interface
 <img width="503" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/172c4ab4-0f80-4021-9c4a-0f9b3c8b20f9">
 <img width="960" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/2b3ec116-89f4-4f8e-8023-e2bff2c31435">
-
+<img width="326" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/7e983610-3120-4e42-a288-7ee4d8281959">
