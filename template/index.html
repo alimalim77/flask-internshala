@@ -39,12 +39,11 @@
     <script>
       $(document).ready(function () {
         $("#fruitForm").submit(function (event) {
-          event.preventDefault(); // Prevent form submission
+          event.preventDefault();
 
           var fruit = $("#fruit").val();
           var color = $("#color").val();
 
-          // Send POST request to backend API
           $.ajax({
             url: "http://localhost:5000/fruits",
             method: "POST",
@@ -57,12 +56,10 @@
             },
           });
 
-          // Clear form fields
           $("#fruit").val("");
           $("#color").val("");
         });
 
-        // Send GET request to backend API on page load
         $.ajax({
           url: "http://localhost:5000/fruits",
           method: "GET",
@@ -73,6 +70,7 @@
       });
 
       function displayFruits(fruits) {
+        console.log(fruits);
         var resultDiv = $("#result");
         resultDiv.empty();
 
