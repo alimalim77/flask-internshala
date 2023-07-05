@@ -15,9 +15,9 @@ and,
 - Real time visualization of sorted data on the basis of color
 
 ## User Interface
-<img width="503" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/172c4ab4-0f80-4021-9c4a-0f9b3c8b20f9">
-<img width="960" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/2b3ec116-89f4-4f8e-8023-e2bff2c31435">
-<img width="326" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/7e983610-3120-4e42-a288-7ee4d8281959">
+<img width="543" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/4b077605-32e1-4173-a36e-09fd6c2b5797">
+<img width="289" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/3763d43e-216b-4b77-9b80-90c784b2b393">
+<img width="434" alt="image" src="https://github.com/alimalim77/flask-internshala/assets/52186295/7464c1bd-1bde-409d-8c5e-d37954b1e8b7">
 
 # How to Run
 - Clone/Fork the repo
